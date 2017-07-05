@@ -3,7 +3,8 @@ var temp = new Date()
 // Date
 function time() {
 	temp = new Date()
-	alert( 'Current Date is: '+ temp.getDate() + "." + temp.getMonth() + "." + temp.getFullYear() + " " + temp.getHours() + "h. " + temp.getMinutes() + "m." );
+	var days = ['Sunday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+	alert( 'Current Date is: '+ days[temp.getDay()]+" "+ temp.getDate() + "." + temp.getMonth() + "." + temp.getFullYear() + " " + temp.getHours() + "h. " + temp.getMinutes() + "m." );
 }
 // converter
 
@@ -15,4 +16,23 @@ function convertTemp() {
 		else temp = parseInt((9/5)*input + 32)
 	document.getElementById("result").innerHTML = temp
 
+}
+
+// calc
+
+
+function calcSum() {
+	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) + parseInt(document.getElementById("b").value)
+}
+
+function calcMult() {
+	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) * parseInt(document.getElementById("b").value)
+}
+
+function calcSub() {
+	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) - parseInt(document.getElementById("b").value)
+}
+
+function calcDev() {
+	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) / parseInt(document.getElementById("b").value)
 }
