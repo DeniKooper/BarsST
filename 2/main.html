@@ -1,0 +1,31 @@
+<html>
+	<head><title>test</title></head>
+	<body>
+		<form action="/main.html">
+		<p>----------- 1 quest ------------</p>
+		<p><input type="button" value="Time now" onclick="time()"></p>
+		<p>----------- ------- ------------</p>
+
+
+		<p>----------- 2 quest ------------</p>
+		<input type="radio" name="converter" id="Celsius" value="0">Celsius -> Fahrenheit<br>
+		<input type="radio" name="converter" id="Fahrenheit" value="1">Fahrenheit -> Celsius<br>
+		<br>
+		<input type="number" id="text" size="10">
+		<input type="button" value="Convert" onclick="convertTemp()">
+		<p>Your answer is : <span id="result">--</span></p>
+		<p>----------- ------- ------------</p>
+
+
+		<p>----------- 3 quest ------------</p>
+		<input type="number" id="a" size="5">
+		<input type="button" value="+" onclick="calc(this)">
+		<input type="button" value="*" onclick="calc(this)">
+		<input type="button" value="-" onclick="calc(this)">
+		<input type="button" value="/" onclick="calc(this)">
+		<input type="number" id="b" size="5">
+		<p>Your answer is : <span id="calcResult">--</span></p>
+		<p>----------- ------- ------------</p>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
