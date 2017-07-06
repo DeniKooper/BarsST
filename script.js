@@ -21,19 +21,24 @@ function convertTemp() {
 
 // calc
 
-
-function calcSum() {
-	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) + parseInt(document.getElementById("b").value)
-}
-
-function calcMult() {
-	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) * parseInt(document.getElementById("b").value)
-}
-
-function calcSub() {
-	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) - parseInt(document.getElementById("b").value)
-}
-
-function calcDev() {
-	document.getElementById("calcResult").innerHTML = parseInt(document.getElementById("a").value) / parseInt(document.getElementById("b").value)
+function calc(button) {
+	temp = button.value
+	a=parseInt(document.getElementById("a").value)
+	b=parseInt(document.getElementById("b").value)
+	if (!isNaN(a) && !isNaN(b)) {
+	switch(temp) {
+		case "+":
+			document.getElementById("calcResult").innerHTML = a + b
+			break
+		case "*":
+			document.getElementById("calcResult").innerHTML = a * b
+			break
+		case "-":
+			document.getElementById("calcResult").innerHTML = a - b
+			break
+		case "/":
+			document.getElementById("calcResult").innerHTML = a / b
+			break	
+		}
+	} else alert("Incorrect input")
 }
